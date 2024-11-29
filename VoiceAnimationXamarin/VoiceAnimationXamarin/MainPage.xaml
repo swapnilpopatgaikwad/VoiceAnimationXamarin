@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VoiceAnimationXamarin"
+             x:Class="VoiceAnimationXamarin.MainPage">
+
+    <StackLayout Spacing="20"
+                         Padding="20"
+                 BackgroundColor="LightGray">
+        <local:DynamicBarAnimationView x:Name="BarAnimationView"
+                                       HeightRequest="60"
+                                       WidthRequest="90"
+                                       AnimationSpeed="400"
+                                       CornerRadius="12"
+                                       SpacingFactor="1.2"
+                                       MaxHeight="60"
+                                       MinHeight="35"
+                                       BarColor="Orange"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="Center"/>
+        <Button Text="Start Animation"
+                BackgroundColor="Blue"
+                TextColor="White"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                Clicked="StartAnimation_Clicked" />
+        <Button Text="Stop Animation"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Clicked="StopAnimation_Clicked" />
+    </StackLayout>
+</ContentPage>
